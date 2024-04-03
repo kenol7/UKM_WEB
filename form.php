@@ -1,3 +1,8 @@
+<?php
+require_once 'functions.php';
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -22,28 +27,28 @@
     </nav>
 
     <main>
-        <form action="">
+        <form action="./functions.php" method="post" enctype="multipart/form-data">
             <h1>Masukan Data Anda</h1>
             <section>
                 <div>
                     <label for="nama">Nama:</label><br>
-                    <input type="text" id="nama" name="nama" class="inputan"><br>
-                    <label for="NIM">NIM:</label><br>
-                    <input type="number" id="NIM" name="NIM" class="inputan"><br>
-                    <label for="JK">Jenis Kelamin:</label><br>
-                    <select id="JK" name="JK" class="inputan">
+                    <input required type="text" id="nama" name="nama" class="inputan"><br>
+                    <label for="nim">NIM:</label><br>
+                    <input required type="number" id="nim" name="nim" class="inputan"><br>
+                    <label for="jk">Jenis Kelamin:</label><br>
+                    <select required id="jk" name="jk" class="inputan">
                         <option value="" hidden selected></option>
-                        <option value="laki-laki">laki-laki</option>
+                        <option value="Laki - laki">Laki - laki</option>
                         <option value="Perempuan">Perempuan</option>
                     </select><br>
                 </div>
                 <div>
-                    <label for="Prodi">Prodi:</label><br>
-                    <input type="text" id="Prodi" name="Prodi" class="inputan"><br>
-                    <label for="No hp">No hp:</label><br>
-                    <input type="number" id="No hp" name="No hp" class="inputan"><br>
+                    <label for="prodi">Prodi:</label><br>
+                    <input required type="text" id="prodi" name="prodi" class="inputan"><br>
+                    <label for="hp">No hp:</label><br>
+                    <input required type="number" id="hp" name="hp" class="inputan"><br>
                     <label for="ukm">PIlihan UKM:</label><br>
-                    <select id="ukm" name="ukm" class="inputan">
+                    <select required id="ukm" name="ukm" class="inputan">
                         <option value="" hidden selected></option>
                         <option value="futsal">futsal</option>
                         <option value="volly">volly</option>
@@ -51,11 +56,18 @@
                     </select><br>
                 </div>
             </section><br>
-            <button class="button">Cencel</button>
-            <button class="button" type="submit">Submit</button>
+            <button class="button" id="cencel">Cencel</button>
+            <button class="button" type="submit" name="proses" value="submit">Submit</button>
         </form>
     </main>
 
 </body>
+<script>
+    const cencel = document.getElementById('cencel')
+
+    cencel.addEventListener('click', function () {
+        window.history.back();
+    })
+</script>
 
 </html>
