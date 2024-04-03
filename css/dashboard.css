@@ -1,0 +1,21 @@
+table th{
+    border:1px solid black ;
+    padding: 1rem;
+    background-color: black;
+    color: white;
+}
+table td {
+    border:1px solid black;
+    padding: 1rem;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+main h1 {
+    text-align: center;
+    margin: 1rem;
+}

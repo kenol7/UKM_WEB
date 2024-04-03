@@ -1,0 +1,24 @@
+*{
+    --primary: #C7C8CC;
+    --secondary: #31363F;
+}
+
+form {
+    border: solid 2px black;
+    width: 30rem ;
+    padding: 2rem;
+    margin: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+form h1 {
+    text-align: center;
+}
+
+main{
+    display: flex;
+    justify-content: center;
+    margin: 1rem;
+}
